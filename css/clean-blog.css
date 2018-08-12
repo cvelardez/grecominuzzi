@@ -105,6 +105,22 @@ img::-moz-selection {
   text-transform: uppercase;
 }
 
+#mainNav .logo{ max-width: 135px; }
+
+#mainNav .isotipo{
+    display: none;
+    max-width: 40px;
+}
+
+#mainNav.is-fixed .isotipo{ display: block; }
+
+#mainNav.is-fixed .logo{ display: none; }
+
+@media (max-width: 768px){
+    #mainNav .isotipo{ display: block !important; }
+    #mainNav .logo{ display: none !important; }
+}
+
 @media only screen and (min-width: 992px) {
   #mainNav {
     border-bottom: 1px solid transparent;
@@ -142,7 +158,7 @@ img::-moz-selection {
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
-    top: -67px;
+    top: 0px;
     -webkit-transition: -webkit-transform 0.2s;
     -moz-transition: -moz-transform 0.2s;
     transition: transform 0.2s;
@@ -153,22 +169,21 @@ img::-moz-selection {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-    color: #0085A1;
+    color: #EC407A;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
     color: #212529;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: #0085A1;
+    color: #EC407A;
   }
-  #mainNav.is-visible {
-    /* if the user changes the scrolling direction, we show the header */
+  /*#mainNav.is-visible {
     -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-  }
+  }*/
 }
 
 header.masthead {
@@ -279,7 +294,7 @@ header.masthead .post-heading .meta a {
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
-  color: #0085A1;
+  color: #EC407A;
 }
 
 .post-preview > a > .post-title {
@@ -307,7 +322,7 @@ header.masthead .post-heading .meta a {
 
 .post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
   text-decoration: underline;
-  color: #0085A1;
+  color: #EC407A;
 }
 
 @media only screen and (min-width: 768px) {
@@ -417,4 +432,28 @@ footer .copyright {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.teammates{ margin-top: 40px; }
+
+.teammates .team-mate{ margin-bottom: 20px; }
+
+.teammates img{
+    border-radius: 50%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.teammates p{
+    margin: 0;
+}
+
+.teammates .name{
+    font-weight: bold;
+    font-size: 23px;
+    color: #EC407A;
+}
+
+.teammates .mp{
+    margin: 5px 0;
 }
